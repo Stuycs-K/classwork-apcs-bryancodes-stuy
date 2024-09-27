@@ -8,6 +8,9 @@ public class MyArrays{
     result += nums[nums.length - 1] + "]";
     return result;
   }
+  public static int[] returnCopy(int[] ary){
+
+  }
   public static void main(String[] args){
     int[] testArray = new int[] {5, 6, 9, 0, 2};
     System.out.println(arrayToString(testArray));
