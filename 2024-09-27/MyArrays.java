@@ -5,7 +5,7 @@ public class MyArrays{
     {
       result += nums[i] + ", ";
     }
-    result += nums[nums.length - 1];
+    result += nums[nums.length - 1] + "]";
     return result;
   }
   public static void main(String[] args){
