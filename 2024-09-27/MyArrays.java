@@ -9,7 +9,7 @@ public class MyArrays{
     return result;
   }
   public static void main(String[] args){
-    int[] testArray = new int{5, 6, 9, 0, 2};
+    int[] testArray = new int[] {5, 6, 9, 0, 2};
     System.out.println(arrayToString(testArray));
   }
 }
