@@ -14,5 +14,6 @@ public class MyArrays{
   public static void main(String[] args){
     int[] testArray = new int[] {5, 6, 9, 0, 2};
     System.out.println(arrayToString(testArray));
+    System.out.println("Expected " + testArray + " and got " + returnCopy(testArray) + (arrayToString(testArray) == arrayToString(returnCopy(testArray))));
   }
 }
