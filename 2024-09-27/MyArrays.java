@@ -9,7 +9,12 @@ public class MyArrays{
     return result;
   }
   public static int[] returnCopy(int[] ary){
-
+    int[] newArray = new int[ary.length];
+    for (int i = 0; i < ary.length; i++)
+    {
+      newArray[i] = ary[i];
+    }
+    return newArray;
   }
   public static void main(String[] args){
     int[] testArray = new int[] {5, 6, 9, 0, 2};
