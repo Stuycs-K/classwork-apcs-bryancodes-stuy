@@ -23,7 +23,7 @@ public class MyArrays{
     while (i < ary1.length)
     {
       combine[i] = ary1[i];
-      i++
+      i++;
     }
     i = ary1.length;
     while (i2 < ary2.length)
@@ -36,7 +36,10 @@ public class MyArrays{
   }
   public static void main(String[] args){
     int[] testArray = new int[] {5, 6, 9, 0, 2};
+    int[] examArray = new int[] {8, 0, 4, 1};
     System.out.println(arrayToString(testArray));
     System.out.println("Expected " + arrayToString(testArray) + " and got " + arrayToString(returnCopy(testArray)));
+    System.out.println("Expected " + arrayToString(examArray) + " and got " + arrayToString(returnCopy(examArray)));
+    System.out.println("Expected [5, 6, 9, 0, 2, 8, 0, 4, 1] and got " + arrayToString(concatArray(testArray, examArray)));
   }
 }
