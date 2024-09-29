@@ -16,6 +16,24 @@ public class MyArrays{
     }
     return newArray;
   }
+  public static int[] concatArray(int[] ary1, int[] ary2){
+    int[] combine = new int[ary1.length + ary2.length];
+    int i = 0;
+    int i2 = 0;
+    while (i < ary1.length)
+    {
+      combine[i] = ary1[i];
+      i++
+    }
+    i = ary1.length;
+    while (i2 < ary2.length)
+    {
+      combine[i] = ary2[i2];
+      i++;
+      i2++;
+    }
+    return combine;
+  }
   public static void main(String[] args){
     int[] testArray = new int[] {5, 6, 9, 0, 2};
     System.out.println(arrayToString(testArray));
