@@ -56,7 +56,13 @@ public class ArrayMethods {
     * e.g. swapRC({{1,2,3},{4,5,6}}) returns {{1,4},{2,5},{3,6}}
     */
   public static int[][] swapRC(int[][]nums){
-    return new int[1][1];
+    int[][] swap = new int[nums[0].length][nums.length];
+    for (int i = 0; i < swap.length; i++){
+      for (int k = 0; k < swap[i].length; k++){
+        swap[i][k] = nums[k][i];
+      }
+    }
+    return swap;
   }
 
   //3. Modify a given 2D array of integer as follows:
@@ -92,6 +98,7 @@ public static int[][] copy(int[][] nums){
     int[][] test3 = new int[][] {};
     int[][] test4 = new int[][] {{},{145,213,2},{4},{12,3021,12}};
     int[][] test5 = new int[][] {{-5, 4, 3}, {0, -2 , 3, -6}};
+    int[][] test6 = new int[][] {{2, 7, 8, 3}, {4, 5, 6, 9}};
     System.out.println(arrToString(test1));
     System.out.println(arrToString(test2));
     System.out.println(arrToString(test3));
@@ -101,5 +108,6 @@ public static int[][] copy(int[][] nums){
     System.out.println(arr2DSum(test4));
     replaceNegative(test5);
     System.out.println(arrToString(test5));
+    System.out.println(arrToString(swapRC(test6)));
   }
 }
