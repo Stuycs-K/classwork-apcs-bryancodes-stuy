@@ -88,8 +88,21 @@ public static void replaceNegative(int[][] vals){
 //DO NOT use any built in methods that "copy" an array.
 //You SHOULD write a helper method for this.
 //If you don't see a good way to do that, you should stop and look at prior methods.
+ public static int[] returnCopy(int[] ary){ //Use returnCopy from 2024-09-27
+    int[] newArray = new int[ary.length]; 
+    for (int i = 0; i < ary.length; i++)
+    {
+      newArray[i] = ary[i];
+    }
+    return newArray;
+  }
+
 public static int[][] copy(int[][] nums){
-  return null;//placeholder so it compiles
+  int[][] newCopy = new int[nums.length][nums[0].length];
+  for (int x = 0; x < newCopy.length; x++){
+    newCopy[x] = returnCopy(nums[x]);
+  }
+  return newCopy;
 }
 
   public static void main(String[] args) {
@@ -109,5 +122,6 @@ public static int[][] copy(int[][] nums){
     replaceNegative(test5);
     System.out.println(arrToString(test5));
     System.out.println(arrToString(swapRC(test6)));
+    System.out.println("Expected " + arrToString(test6) + " and got " + arrToString(copy(test6)) + " " + (test6 == copy(test6)));
   }
 }
