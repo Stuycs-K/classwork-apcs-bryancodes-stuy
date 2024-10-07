@@ -95,7 +95,12 @@ public class ArrayDemo{
 
 
   public static int[][] copy(int[][] nums){
-    int[][] newCopy = new int[nums.length][nums[0]]
+    int[][] newCopy = new int[nums.length][];
+    for (int i = 0; i < nums.length; i++){
+      newCopy[i] = new int[nums[i].length];
+      newCopy[i] = returnCopy(nums[i]);
+    }
+    return newCopy;
   }
 
   //5. Rotate an array by returning a new array with the rows and columns swapped.
