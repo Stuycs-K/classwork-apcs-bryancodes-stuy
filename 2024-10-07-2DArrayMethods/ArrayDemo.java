@@ -5,6 +5,9 @@ public class ArrayDemo{
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
+    int[][] test1 = new int[][]{{1, 0, 4}, {0, 8, -7, 0, 3}, {5, -6, 13, 0, 4}};
+    System.out.println("Built-in method gets " + Arrays.deepToString(test1) + " and my methods gets " + arrToString(test1));
+    System.out.println("Expected 4 and got " + countZeros2D(test1));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
