@@ -9,6 +9,7 @@ public class ArrayDemo{
     System.out.println("Built-in method gets " + Arrays.deepToString(test1) + " and my methods gets " + arrToString(test1));
     System.out.println("Expected 4 and got " + countZeros2D(test1));
     System.out.println(Arrays.deepToString(test1) + " vs " + Arrays.deepToString(copy(test1)) + " and " + (test1 == copy(test1)));
+    System.out.println(htmlTable(test1));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
@@ -136,5 +137,6 @@ public class ArrayDemo{
       html += "</tr>";
     }
     html += "</table>";
+    return html;
   }
 }
