@@ -5,5 +5,10 @@ public class Driver{
     System.out.println("My name is Duck.\nI am 10 years old.\nI say Quack.");
     System.out.println("Returned:");
     myAnimal.speak();
+    myAnimal = new Bird("Quack", 10, "Duck", 5.2, "Green");
+    System.out.println("Expected:");
+    System.out.println("My name is Duck.\nI am 10 years old.\nI say Quack.");
+    System.out.println("Returned:");
+    myAnimal.speak();
   }
 }
