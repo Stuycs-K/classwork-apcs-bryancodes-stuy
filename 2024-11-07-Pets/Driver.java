@@ -1,7 +1,9 @@
 // The speak() method for Bird printed "My name is The Mighty Duck"
 // instead of "My name is Duck"
 // And the speak() method for Animal printed the same thing
-
+// b2 does not work because it's a Bird object and is calling Animal
+// from the super class, which is not possible, as Animal does not have all
+// the necessary functions for bird, since it doesn't have height or color.
 public class Driver{
   public static void main(String[] args){
     Animal myAnimal = new Animal("Quack", 10, "Duck");
