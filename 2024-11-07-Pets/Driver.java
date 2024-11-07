@@ -1,3 +1,7 @@
+// The speak() method for Bird printed "My name is The Mighty Duck"
+// instead of "My name is Duck"
+// And the speak() method for Animal printed the same thing
+
 public class Driver{
   public static void main(String[] args){
     Animal myAnimal = new Animal("Quack", 10, "Duck");
