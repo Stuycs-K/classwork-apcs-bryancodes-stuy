@@ -12,6 +12,7 @@ public class Driver{
     ArrayList<String> a2 = ArrayListPractice.makeReversedList(a1);
     System.out.println(a2);
 
-    
+    ArrayList<String> a3 = ArrayListPractice.mixLists(a1, a2);
+    System.out.println(a3);
   }
 }

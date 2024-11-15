@@ -39,5 +39,28 @@ public class ArrayListPractice{
   //return a new ArrayList that has all values of a and b in alternating order that is:
   //a[0], b[0], a[1], b[1]...
   //If one list is longer than the other, just attach the remaining values to the end.
+  ArrayList<String>combined = new ArrayList<String>(a.size() + b.size());
+  if (a.size() > b.size()){
+    for (int i = 0; i < b.size(); i++){
+        combined.add(a.get(i));
+        combined.add(b.get(i));
+    }
+    if (a.size() > b.size()){
+        for (int i = b.size(); i < a.size(); i++){
+            combined.add(a.get(i));
+        }
+    }
+    return combined;
+  }else{
+    for (int i = 0; i < a.size(); i++){
+        combined.add(a.get(i));
+        combined.add(b.get(i));
+    }
+    for (int i = a.size(); i < b.size(); i++){
+        combined.add(b.get(i));
+    }
+    return combined;
+  }
+  }
 }
 
