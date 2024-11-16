@@ -15,6 +15,7 @@ public class Driver{
     ArrayList<String> a3 = ArrayListPractice.mixLists(a1, a2);
     System.out.println(a3);
 
+
     ArrayList<String> a4 = ArrayListPractice.createRandomArray(200000);
     System.out.println(a4);
 
@@ -26,5 +27,11 @@ public class Driver{
 
     ArrayList<String> a6 = ArrayListPractice.mixLists(a1, a2);
     System.out.println(a6);
+
+    ArrayList<String> a7 = ArrayListPractice.createRandomArray(7);
+    ArrayListPractice.replaceEmpty(a7);
+    System.out.println(a7);
+    ArrayList<String> a8 = ArrayListPractice.mixLists(a1, a7);
+    System.out.println(a8);
   }
 }
