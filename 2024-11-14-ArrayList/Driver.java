@@ -14,5 +14,17 @@ public class Driver{
 
     ArrayList<String> a3 = ArrayListPractice.mixLists(a1, a2);
     System.out.println(a3);
+
+    ArrayList<String> a4 = ArrayListPractice.createRandomArray(200000);
+    System.out.println(a4);
+
+    ArrayListPractice.replaceEmpty(a4);
+    System.out.println(a4);
+
+    ArrayList<String> a5 = ArrayListPractice.makeReversedList(a4);
+    System.out.println(a5);
+
+    ArrayList<String> a6 = ArrayListPractice.mixLists(a1, a2);
+    System.out.println(a6);
   }
 }
