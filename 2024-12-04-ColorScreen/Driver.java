@@ -30,14 +30,24 @@ public class Driver{
     public static void colorKey(int num){
         if (num < 25){
             Text.color(Text.RED, Text.BRIGHT);
+            System.out.print(num);
         }else{
             if (num > 75){
                 Text.color(Text.GREEN, Text.BRIGHT);
+                System.out.print(num);
             }else{
                 Text.color(Text.WHITE);
+                System.out.print(num);
             }
         }
     }
 
-    
+    public static void main(String[] args){
+        System.out.print(Text.CLEAR_SCREEN);
+        System.out.print(Text.HIDE_CURSOR);
+        border(30, 80, Text.MAGENTA);
+        Text.go(29, 0);
+        Text.go(29, 26);
+        colorKey(randomInt[0]);
+    }
 }
