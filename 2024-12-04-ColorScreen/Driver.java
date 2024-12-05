@@ -3,27 +3,27 @@ public class Driver{
     public static final int[] randomInt = new int[]{17, 55, 89};
 
     public static void border(int wide, int height, int colorChoice){
-        int w = 0;
-        int h = 0;
-        while (w < wide){
+        int w = 1;
+        int h = 1;
+        while (w <= wide){
             Text.go(h, w);
             Text.color(colorChoice);
             System.out.print("Q");
             w++;
         }
-        while (h < height){
+        while (h <= height){
             Text.go(h, w);
             Text.color(colorChoice);
             System.out.print("Q");
             h++;
         }
-        while (w >= 0){
+        while (w >= 1){
             Text.go(h, w);
             Text.color(colorChoice);
             System.out.print("Q");
             w--;
         }
-        while (h >= 0){
+        while (h >= 1){
             Text.go(h, w);
             Text.color(colorChoice);
             System.out.print("Q");
@@ -46,16 +46,25 @@ public class Driver{
         }
     }
 
+
     public static void main(String[] args){
         System.out.print(Text.CLEAR_SCREEN);
         System.out.print(Text.HIDE_CURSOR);
-        border(30, 80, Text.MAGENTA);
-        Text.go(29, 0);
-        Text.go(29, 26);
+        border(80, 31, Text.MAGENTA);
+        Text.go(2, 1);
+        Text.go(2, 26);
         colorKey(randomInt[0]);
-        Text.go(29, 52);
+        Text.go(2, 52);
         colorKey(randomInt[1]);
-        Text.go(29, 78);
-        colorkey(randomInt[2]);
+        Text.go(2, 78);
+        colorKey(randomInt[2]);
+        Text.go(3, 1);
+        Text.color(Text.CYAN);
+        for (int i = 2; i < 80; i++){
+            Text.go(3, i);
+            System.out.print("E");
+        }
+        Text.go(31, 0);
+        System.out.println(Text.RESET);
     }
 }
