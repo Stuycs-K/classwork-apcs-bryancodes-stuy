@@ -7,22 +7,26 @@ public class Driver{
         int h = 0;
         while (w < wide){
             Text.go(h, w);
-            Text.color(Text.background(colorChoice));
+            Text.color(colorChoice);
+            System.out.print("Q");
             w++;
         }
         while (h < height){
             Text.go(h, w);
-            Text.color(Text.background(colorChoice));
+            Text.color(colorChoice);
+            System.out.print("Q");
             h++;
         }
         while (w >= 0){
             Text.go(h, w);
-            Text.color(Text.background(colorChoice));
+            Text.color(colorChoice);
+            System.out.print("Q");
             w--;
         }
         while (h >= 0){
             Text.go(h, w);
-            Text.color(Text.background(colorChoice));
+            Text.color(colorChoice);
+            System.out.print("Q");
             h--;
         }
     }
@@ -49,5 +53,9 @@ public class Driver{
         Text.go(29, 0);
         Text.go(29, 26);
         colorKey(randomInt[0]);
+        Text.go(29, 52);
+        colorKey(randomInt[1]);
+        Text.go(29, 78);
+        colorkey(randomInt[2]);
     }
 }
