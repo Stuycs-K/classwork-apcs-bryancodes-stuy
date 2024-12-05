@@ -26,4 +26,18 @@ public class Driver{
             h--;
         }
     }
+
+    public static void colorKey(int num){
+        if (num < 25){
+            Text.color(Text.RED, Text.BRIGHT);
+        }else{
+            if (num > 75){
+                Text.color(Text.GREEN, Text.BRIGHT);
+            }else{
+                Text.color(Text.WHITE);
+            }
+        }
+    }
+
+    
 }
