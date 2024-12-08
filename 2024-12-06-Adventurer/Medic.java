@@ -35,20 +35,20 @@ public class Medic extends Adventurer{
 
   public String attack(Adventurer other){
     String result = "";
-    if (other.getHP() > 0 && getSpecial() > 0){
+    if (other.getHP() > 0 && super.getHP() > 0 && getSpecial() > 0){
       other.applyDamage(other.getHP() / 2); 
       setSpecial(getSpecial() - 1); // The medical kits also contain poisons or make a person overdose.
       result = "Opponent health is now: " + other.getHP() + " and you have " + getSpecial() + " medical kits.";
       return result;
     }else{
-      result = "Opponent is already dead or not enough medical kits.";
+      result = "Someone is already dead or not enough medical kits.";
       return result;
     }
   }
 
   public String support(Adventurer other){
     String result = "";
-    if (other.getHP() > 0 && getSpecial() > 0){
+    if (other.getHP() > 0 && super.getHP() > 0 && getSpecial() > 0){
       int newHP = other.getHP() * 2;
       if (newHP > other.getmaxHP()) newHP = other.getmaxHP();
       other.setHP(newHP);
@@ -56,7 +56,7 @@ public class Medic extends Adventurer{
       result = "Opponent health is now: " + other.getHP() + " and you have " + getSpecial() + " medical kits.";
       return result; 
     }else{
-      result = "Opponent is already dead or not enough medical kits.";
+      result = "Someone is already dead or not enough medical kits.";
       return result;
     }
   }
@@ -78,7 +78,7 @@ public class Medic extends Adventurer{
 
   public String specialAttack(Adventurer other){
     String result = "";
-    if (other.getHP() > 0 && getSpecial() > 3){
+    if (other.getHP() > 0 && super.getHP() > 0 && getSpecial() > 3){
       int otherHealth = other.getHP();
       other.applyDamage(otherHealth); //kills opponent completely
       setSpecial(getSpecial() - 3); // Uses three medical kits
@@ -86,7 +86,7 @@ public class Medic extends Adventurer{
       result = "Opponent health is now: " + other.getHP() + " and you have " + getSpecial() + " medical kits.";
       return result; 
     }else{
-      result = "Opponent is already dead or not enough medical kits.";
+      result = "Someone is already dead or not enough medical kits.";
       return result;
     }
   }

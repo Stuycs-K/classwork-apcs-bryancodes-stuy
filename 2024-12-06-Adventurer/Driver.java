@@ -6,5 +6,10 @@ public class Driver{
         System.out.println("New supply is " + a.getSpecial() + " medkits.");
         Adventurer b = new Medic("Ralph", 16, "Hawk");
         System.out.println(b.getSpecialName() + " can have " + b.getSpecialMax() + " medkits at most.");
+        System.out.println(b.attack(a));
+        System.out.println(b.support());
+        System.out.println(b.support(a)); // You accidently help opponent.
+        System.out.println(a.specialAttack(b));
+        System.out.println(a.support(b));
     }
 }
