@@ -34,28 +34,60 @@ public class Medic extends Adventurer{
   }
 
   public String attack(Adventurer other){
-    super.other.applyDamage(super.other.getHP / 2); 
-    setSpecial(n - 1); // The medical kits also contain poisons or make a person overdose.
+    String result = "";
+    if (super.other.getHP() > 0 && getSpecial() > 0){
+      super.other.applyDamage(super.other.getHP() / 2); 
+      setSpecial(getSpecial() - 1); // The medical kits also contain poisons or make a person overdose.
+      result = "Opponent health is now: " + super.other.getHP() + " and you have " + getSpecial() + " medical kits.";
+      return result;
+    }else{
+      result = "Opponent is already dead or not enough medical kits.";
+      return result;
+    }
   }
 
   public String support(Adventurer other){
-    int newHP = super.other.getHP() * 2;
-    if (newHP > super.other.getmaxHP()) newHP = super.other.getmaxHP();
-    super.other.setHP(newHP);
-    setSpecial(n - 1); // Use medicine on the other adventurer. 
+    String result = "";
+    if (super.other.getHP() > 0 && getSpecial() > 0){
+      int newHP = super.other.getHP() * 2;
+      if (newHP > super.other.getmaxHP()) newHP = super.other.getmaxHP();
+      super.other.setHP(newHP);
+      setSpecial(getSpecial() - 1); // Use medicine on the other adventurer.
+      result = "Opponent health is now: " + super.other.getHP() + " and you have " + getSpecial() + " medical kits.";
+      return result; 
+    }else{
+      result = "Opponent is already dead or not enough medical kits.";
+      return result;
+    }
   }
 
   public String support(){
-    int newHP = super.getHP() * 2;
-    if (newHP > super.getmaxHP()) newHP = super.getmaxHP();
-    super.setHP(newHP);
-    setSpecial(n - 1);
-  }
+    String result = "";
+    if (super.getHP() > 0 && getSpecial() > 0){
+      int newHP = super.getHP() * 2;
+      if (newHP > super.getmaxHP()) newHP = super.getmaxHP();
+      super.setHP(newHP);
+      setSpecial(getSpecial() - 1);
+      result = "Your health is now: " + super.other.getHP() + " and you have " + getSpecial() + " medical kits.";
+      return result;
+    }else{
+      result = "Your or your supplies are dead.";
+      return result;
+    }
+  } 
 
   public String specialAttack(Adventurer other){
-    int otherHealth = super.other.getHP();
-    super.other.applyDamage(otherHealth); //kills opponent completely
-    setSpecial(n - 3); // Uses three medical kits
-    setSpecial(otherHealth * 3); // Each hp can get 3 medical kits
+    String result = "";
+    if (super.getHP() > 0 && getSpecial() > 3){
+      int otherHealth = super.other.getHP();
+      super.other.applyDamage(otherHealth); //kills opponent completely
+      setSpecial(n - 3); // Uses three medical kits
+      super.restoreSpecial(otherHealth * 3); // Each hp can get 3 medical kits
+      result = "Opponent health is now: " + super.other.getHP() + " and you have " + getSpecial() + " medical kits.";
+      return result; 
+    }else{
+      result = "Opponent is already dead or not enough medical kits.";
+      return result;
+    }
   }
 }
