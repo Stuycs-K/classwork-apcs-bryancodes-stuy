@@ -3,7 +3,7 @@ public class Medic extends Adventurer{
   private int medicalKit, maxMeds;
   private String specialName;
 
-  public Medic(String name, int supply, int code){
+  public Medic(String name, int supply, String code){
     super(name);
     medicalKit = supply;
     maxMeds = supply + 5;
@@ -82,7 +82,7 @@ public class Medic extends Adventurer{
       int otherHealth = other.getHP();
       other.applyDamage(otherHealth); //kills opponent completely
       setSpecial(getSpecial() - 3); // Uses three medical kits
-      super.restoreSpecial(otherHealth * 3); // Each hp can get 3 medical kits
+      super.restoreSpecial(otherHealth * 3); // Each hp can get 3 medical kits after draining opponent.
       result = "Opponent health is now: " + other.getHP() + " and you have " + getSpecial() + " medical kits.";
       return result; 
     }else{
