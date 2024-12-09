@@ -5,6 +5,7 @@ public class Game{
     Scanner userInput = new Scanner(System.in);
     System.out.println("Enter username");
     String userName = userInput.nextLine();
-    System.out.println("Username is: " + userName);
+    CodeWarrior player = new CodeWarrior(userName);
+    Medic enemy = new Medic("Bryan", 8, "bot");
   }
 }
