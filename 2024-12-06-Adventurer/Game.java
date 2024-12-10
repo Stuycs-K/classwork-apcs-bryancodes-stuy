@@ -34,17 +34,21 @@ public class Game{
         if (move.equals("su") || move.equals("support")){
           System.out.println(player.support());
           int choose = (int)(Math.random() * 10);
-          if (choose > 5){
+          if (choose > 3){
             System.out.println(enemy.support());
           }else{
-            System.out.println(enemy.attack(player));
+            System.out.println(enemy.specialAttack(player));
           }
         }
         if (move.equals("quit")) {
           System.out.println("The game is over.");
           System.exit(0);
         }
+      }catch(Exception e){
+        System.out.println("Error: Please make sure you type one of the correct choices.");
       }
     }
+    if (player.getHP() == 0) System.out.println(player.getName() + " is the winner.");
+    if (enemy.getHP() == 0) System.out.println(enemy.getName() + " is the winner.");
   }
 }
