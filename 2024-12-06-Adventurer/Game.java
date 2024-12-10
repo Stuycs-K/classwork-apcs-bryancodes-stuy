@@ -9,7 +9,7 @@ public class Game{
     Adventurer enemy = new Medic("Bryan", 8, "bot");
     System.out.println(player.getName() + ", " + player.getHP() + "/" + player.getmaxHP() + " HP, " + player.getSpecial() + "/" + player.getSpecialMax() + " " + player.getSpecial());
     System.out.println(enemy.getName() + ", " + enemy.getHP() + "/" + enemy.getmaxHP() + " HP, " + enemy.getSpecial() + "/" + enemy.getSpecialMax() + " " + enemy.getSpecial());
-    while (player.getHP() > 0 && enemy.getHP()){
+    while (player.getHP() > 0 && enemy.getHP() > 0){
       System.out.println("Type: (a)ttack / (sp)ecial / (su)pport / quit");
       String move = userInput.nextLine();
       try{
