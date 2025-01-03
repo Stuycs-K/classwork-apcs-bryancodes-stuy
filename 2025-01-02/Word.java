@@ -5,10 +5,11 @@ public class Word{
         System.out.println(result);
       }else{
         if (i == alphabet.length() - 1){
-          result += alphabet.substring(i);
+          makeWords(remainingLetters--, result += alphabet.substring(i), alphabet);
         }else{
-          result += alphabet.substring(i, i + 1);
+          makeWords(remainingLetters--, result += alphabet.substring(i, i + 1), alphabet);
         }
       }
+    }
   }
 }
